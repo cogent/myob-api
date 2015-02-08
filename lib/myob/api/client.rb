@@ -43,6 +43,7 @@ module Myob
 
         model :TaxCode
         model :Account
+        model :AccountRegister
 
         @redirect_uri         = options[:redirect_uri]
         @consumer             = options[:consumer]

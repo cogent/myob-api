@@ -35,5 +35,6 @@ require 'myob/api/models/timesheet'
 
 require 'myob/api/models/tax_code'
 require 'myob/api/models/account'
+require 'myob/api/models/account_register'
 
 require 'myob/api/client'
