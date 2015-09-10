@@ -23,14 +23,14 @@ module Myob
           !!@next_page_link
         end
         
-        def next_page(query = nil)
+        def next_page(query = nil, modified_after=nil)
           perform_request(@next_page_link, query, modified_after)
         end
 
         def all_items(query = nil, modified_after = nil)
           results = all(query, modified_after)["Items"]
           while next_page?
-            results += next_page(query)["Items"] || []
+            results += next_page(query, modified_after)["Items"] || []
           end
           results
         end
